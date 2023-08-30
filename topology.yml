@@ -1,4 +1,4 @@
-name: Testing-lab-1-machine
+name: kypo-crp-demo-training
 
 hosts:
   - name: server
