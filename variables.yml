@@ -1,11 +1,19 @@
 # For more details about APG Variables see https://muni-kypo-crp.gitlab-pages.ics.muni.cz/kypo-crp-docs/user-guide-advanced/sandboxes/apg-variables/
 
-telnet_port:
-    type: port
-    min: 1500
+random_password_1:
+    type: password
 
-alice_flag:
+random_password_2:
+    type: password
+    length: 15
+
+random_text:
+    type: text
+    length: 20
+
+random_username:
+    type: username
+
+fake_flag:
     type: text
 
-root_flag:
-    type: text

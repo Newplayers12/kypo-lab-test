@@ -15,20 +15,31 @@
   hosts: server
   become: yes
   roles:
-    - name: server
-      telnet_port: "{{ telnet_port }}"
-      flag: "{{ alice_flag }}"
-      flag_2: "{{ root_flag }}"
-
-- name: set up client
-  hosts: client
-  become: yes
-  roles:
     - name: kypo-user-access
-      kypo_user_access_username: user
-      kypo_user_access_password: Password123
+      kypo_user_access_username: level_1
+      kypo_user_access_password: welcome
       kypo_user_access_sudo: True
-    - name: client
+    - name: server
+      fake_flag: "{{ fake_flag }}"
+      random_text: "{{ random_text }}"
+      random_username: "{{ random_username }}"
+      random_password_1: "{{ random_password_1 }}"
+      random_password_2: "{{ random_password_2 }}"
+
+
+      # flag: "{{ flag }}"
+      # flag_2: "{{ root_flag }}"
+      # telnet_port: "{{ telnet_port }}"
+
+# - name: set up client
+#   hosts: client
+#   become: yes
+#   roles:
+#     - name: kypo-user-access
+#       kypo_user_access_username: user
+#       kypo_user_access_password: Password123
+#       kypo_user_access_sudo: True
+#     - name: client
 
 - name: set up command logging
   hosts: hosts
