@@ -1,4 +1,4 @@
-name: "Testing lab 1 machine"
+name: Testing-lab-1-machine
 
 hosts:
   - name: server
